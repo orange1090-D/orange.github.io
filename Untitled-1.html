@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head><meta content="default-src 'none'; style-src * 'unsafe-inline'; script-src * 'unsafe-inline'; img-src * data: blob:; font-src * data:; media-src * data: blob:; connect-src 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'" http-equiv="Content-Security-Policy"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>当代大学生校园生活情感洞察 | 深度数据新闻报告</title>
+<script src="https://image.uc.cn/s/uae/g/3n/mos-production/fontawesome-free-7.1.0-web/js/all.min.js"></script>
+<script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/3.4.17.js"></script>
+<script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/echarts.min.js"></script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #f72585;
+            --light-bg: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+        
+        body {
+            font-family: 'Inter', 'Microsoft YaHei', sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Noto Serif SC', 'SimSun', serif;
+            font-weight: 700;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 50%, #7209b7 100%);
+        }
+        
+        .section-alt-1 {
+            background-color: #f0f7ff;
+        }
+        
+        .section-alt-2 {
+            background-color: #f9f7ff;
+        }
+        
+        .section-alt-3 {
+            background-color: #fff7f0;
+        }
+        
+        .section-alt-4 {
+            background-color: #f0fff7;
+        }
+        
+        .quote-card {
+            border-left: 4px solid var(--accent-color);
+            background: linear-gradient(to right, rgba(247, 37, 133, 0.05), transparent);
+        }
+        
+        .data-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+        
+        .data-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .data-card-1:hover { border-top-color: #4361ee; }
+        .data-card-2:hover { border-top-color: #f72585; }
+        .data-card-3:hover { border-top-color: #4cc9f0; }
+        .data-card-4:hover { border-top-color: #7209b7; }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% + 1rem);
+            background-color: #e2e8f0;
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .chart-container {
+            height: 400px;
+            width: 100%;
+        }
+        
+        .hover-lift {
+            transition: transform 0.2s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-3px);
+        }
+        
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+    </style>
+<script>
+!(function(j,a,g){j.__itrace_conf = {bid: 'kt40h0wl-koyh4af8',rel: '', uid: 'c6d8c309-4481-41e0-adf2-b74e5e33f3bc' ,  spa: true, plugins:['jserror','interface','perf','resource','flow','blank']};var b = a.createElement("script");var d = a.getElementsByTagName("script")[0];b.type = "text/javascript";b.crossorigin = true;b.async = true;b.onload = function(){j.__itrace && j.__itrace.setReady()};d.parentNode.insertBefore(b,d);b.src = g})(window, document, "https://g.alicdn.com/woodpeckerx/itrace-next/itrace.iife.js")
+</script>
+</head>
+<body class="bg-gray-50">
+
+<nav class="sticky top-0 z-50 bg-white shadow-md">
+<div class="container mx-auto px-4 py-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+<h1 class="text-xl font-bold text-gray-800">大学生情感洞察报告</h1>
+</div>
+<div class="hidden md:flex space-x-6">
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#summary">摘要</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#mental-health">心理健康</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#happiness-pain">幸福与痛苦</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#relationships">人际关系</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#conclusion">结论</a>
+</div>
+<div class="md:hidden">
+<button class="text-gray-600" id="mobile-menu-btn">
+<i class="fas fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+
+<div class="hidden md:hidden mt-4 pb-2 border-t pt-4" id="mobile-menu">
+<div class="flex flex-col space-y-3">
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#summary">摘要</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#mental-health">心理健康</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#happiness-pain">幸福与痛苦</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#relationships">人际关系</a>
+<a class="text-gray-600 hover:text-blue-600 font-medium" href="#conclusion">结论</a>
+</div>
+</div>
+</div>
+</nav>
+
+<header class="hero-gradient text-white py-16 md:py-24">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-6">
+<i class="fas fa-heart text-2xl"></i>
+</div>
+<h1 class="text-4xl md:text-5xl font-bold mb-6">当代大学生校园生活情感洞察</h1>
+<p class="text-xl md:text-2xl opacity-90 mb-8">在结构性压力与个体韧性之间寻找平衡的Z世代</p>
+<div class="flex flex-wrap justify-center gap-4">
+<div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+<span class="font-semibold">调研样本</span>
+<span class="ml-2">2,712人</span>
+</div>
+<div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+<span class="font-semibold">数据来源</span>
+<span class="ml-2">2024-2025年</span>
+</div>
+<div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+<span class="font-semibold">核心发现</span>
+<span class="ml-2">12大主题</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+<section class="py-16 section-alt-1" id="summary">
+<div class="container mx-auto px-4">
+<div class="max-w-5xl mx-auto">
+<div class="flex items-center mb-10">
+<div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mr-4">
+<i class="fas fa-quote-left text-blue-600 text-xl"></i>
+</div>
+<h2 class="text-3xl font-bold text-gray-800">一、摘要：青春的张力</h2>
+</div>
+<div class="quote-card p-6 rounded-xl mb-8">
+<p class="text-xl italic text-gray-700 mb-4">"我们既享受着人生中物质成本最低、自由度最高的四年时光，也承受着远超前几代人的升学、就业与社会期待的多重挤压。"</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-xl font-bold mb-4 text-blue-700 flex items-center">
+<i class="fas fa-chart-line mr-2"></i>结构性压力的具体表现
+                        </h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<span><strong>学业绩点竞争白热化</strong>：GPA成为保研、留学、名企求职的硬通货</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<span><strong>"卷实习""卷科研"成常态</strong>：大一大二即开始规划简历，时间精力被严重挤压</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<span><strong>就业市场供需错配</strong>：高质量岗位增长缓慢，"学历贬值焦虑"持续蔓延</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+<span><strong>城市房价与婚育成本构成现实门槛</strong>：62.1%的青年认为自己在经济上"完全没有准备"或"准备不足" <sup>[1]</sup></span>
+</li>
+</ul>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6">
+<h3 class="text-xl font-bold mb-4 text-pink-600 flex items-center">
+<i class="fas fa-heartbeat mr-2"></i>个体韧性的多维体现
+                        </h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="fas fa-bullseye text-blue-500 mt-1 mr-3"></i>
+<span><strong>主动构建"微确定性"</strong>：通过完成拖延任务，重建对生活的掌控感</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-users text-blue-500 mt-1 mr-3"></i>
+<span><strong>发展出新型社交模式</strong>："搭子文化"以低投入、高回报方式满足特定需求</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-robot text-blue-500 mt-1 mr-3"></i>
+<span><strong>利用技术拓展情感支持边界</strong>：向AI倾诉烦恼，使用情绪消费服务充值心理能量</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+<p class="text-lg text-gray-700 mb-4">这种张力并非静态的对抗，而是一种动态平衡过程。他们在痛苦中寻找慰藉，在孤独中创造联结，在压抑中争取自由。他们的幸福感越来越依赖于<strong class="text-blue-600">微观掌控感、自主选择权与真实的情感回应</strong>，而痛苦则集中于<strong class="text-pink-600">未来的不确定性、深层情感缺失与制度性压迫</strong>。</p>
+</div>
+
+<div class="mb-12">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-image text-blue-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">课堂学习状态</h3>
+</div>
+<div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="大学教室学习场景中学生专注听讲并认真记笔记" class="w-full h-full object-cover" src="https://agent.qianwen.com/mos/3343707f21b64f82877bb925d2a0067a/40d5a271daee2e958c95bac6a9a68acb"/>
+</div>
+<p class="text-gray-600 mt-4 text-sm">一名学生在整洁明亮的教室内专注听讲并认真记录笔记，展现了校园日常的学习状态，也隐喻了学业压力这一核心议题。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-white" id="mental-health">
+<div class="container mx-auto px-4">
+<div class="max-w-5xl mx-auto">
+<div class="flex items-center mb-10">
+<div class="w-12 h-12 rounded-lg bg-pink-100 flex items-center justify-center mr-4">
+<i class="fas fa-brain text-pink-600 text-xl"></i>
+</div>
+<h2 class="text-3xl font-bold text-gray-800">二、心理健康风险呈显著上升趋势</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+
+<div class="data-card data-card-1 bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+<i class="fas fa-chart-bar text-blue-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800">最新数据更新</h3>
+</div>
+<p class="text-gray-600 mb-4">根据浙江中医药大学2025年调研（样本量2,712人）：</p>
+<div class="space-y-3">
+<div class="flex justify-between items-center pb-2 border-b">
+<span class="text-gray-700">全国大学生抑郁症状检出率</span>
+<span class="text-2xl font-bold text-red-600">24.26%</span>
+</div>
+<div class="flex justify-between items-center pb-2 border-b">
+<span class="text-gray-700">焦虑症状检出率</span>
+<span class="text-2xl font-bold text-orange-500">33.22%</span>
+</div>
+<div class="flex justify-between items-center pb-2 border-b">
+<span class="text-gray-700">女生抑郁检出率</span>
+<span class="text-xl font-bold text-pink-600">25.33%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">男生抑郁检出率</span>
+<span class="text-xl font-bold text-blue-600">22.61%</span>
+</div>
+</div>
+<p class="text-sm text-gray-500 mt-4">来源：浙江中医药大学调研 <sup>[2]</sup></p>
+</div>
+
+<div class="data-card data-card-2 bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+<div class="flex items-center mb-4">
+<div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center mr-3">
+<i class="fas fa-bed text-pink-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800">睡眠质量与心理风险</h3>
+</div>
+<div class="mb-6">
+<div class="text-center mb-2">
+<span class="text-5xl font-bold text-purple-600">61.21%</span>
+</div>
+<p class="text-gray-700 text-center">睡眠质量差者抑郁检出率</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4">
+<p class="text-gray-600 text-sm">尽管超过 <strong>80.0%</strong> 的学生知晓学校提供免费心理咨询服务，但实际利用率仅为 <strong>2.8%</strong>，反映出严重的"知行分离"问题 <sup>[3],[4]</sup>。</p>
+</div>
+</div>
+</div>
+
+<div class="mb-12">
+<div class="bg-white rounded-xl shadow-lg p-6">
+<div class="flex items-center mb-6">
+<i class="fas fa-project-diagram text-blue-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">影响因素机制图谱</h3>
+</div>
+<div class="bg-gray-50 rounded-lg p-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+<div class="bg-blue-50 p-4 rounded-lg">
+<div class="text-blue-600 font-bold mb-2">学业压力</div>
+<div class="text-gray-600 text-sm">→ 注意力涣散 → 课后焦虑循环</div>
+</div>
+<div class="bg-pink-50 p-4 rounded-lg">
+<div class="text-pink-600 font-bold mb-2">睡眠障碍</div>
+<div class="text-gray-600 text-sm">→ 情绪调节能力下降 → 抑郁/焦虑风险↑</div>
+</div>
+<div class="bg-green-50 p-4 rounded-lg">
+<div class="text-green-600 font-bold mb-2">社交孤立</div>
+<div class="text-gray-600 text-sm">← 寝室关系紧张 → 缺乏运动</div>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-white p-4 rounded-lg shadow-sm">
+<h4 class="font-bold text-gray-800 mb-2">运动频率的影响</h4>
+<p class="text-gray-600 text-sm">每周运动3次及以上者，抑郁与焦虑风险最低；然而仅有 <strong>52.5%</strong> 的大学生达到此标准 <sup>[3],[4]</sup>。</p>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm">
+<h4 class="font-bold text-gray-800 mb-2">社会支持的缓冲作用</h4>
+<p class="text-gray-600 text-sm">工具支持最高组 vs 最低组的抑郁风险分别为 <strong>2.1%</strong> 与 <strong>11.8%</strong> <sup>[4]</sup>。</p>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm">
+<h4 class="font-bold text-gray-800 mb-2">恋爱状态的保护效应</h4>
+<p class="text-gray-600 text-sm">有恋人者的抑郁风险低于无恋人者，尤其对男生更为显著（男生：2.1% vs 4.2%）<sup>[4]</sup>。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mb-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-users text-green-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">积极社交与身心联动</h3>
+</div>
+<div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="学生在户外社团活动展台前交流机器人模型" class="w-full h-full object-cover" src="https://agent.qianwen.com/mos/3343707f21b64f82877bb925d2a0067a/096d5fbc4d9ae23718dd1c8f6b049484"/>
+</div>
+<p class="text-gray-600 mt-4 text-sm">几名学生在户外社团活动中围绕展台热烈交流，展台上摆放着机器人模型。该场景象征着积极的同伴互动与身心联动，是抵御心理危机的重要力量。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 section-alt-2" id="happiness-pain">
+<div class="container mx-auto px-4">
+<div class="max-w-5xl mx-auto">
+<div class="flex items-center mb-10">
+<div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mr-4">
+<i class="fas fa-smile text-green-600 text-xl"></i>
+</div>
+<h2 class="text-3xl font-bold text-gray-800">三、最幸福与最痛苦的日常场景对比</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+
+<div class="bg-white rounded-xl shadow-lg p-6">
+<div class="flex items-center mb-6">
+<div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-3">
+<i class="fas fa-sun text-yellow-500"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800">最幸福的瞬间：微观掌控感的胜利</h3>
+</div>
+<div class="space-y-6">
+<div class="timeline-item">
+<h4 class="font-bold text-gray-800 mb-2">解决悬而未决之事</h4>
+<div class="bg-green-50 p-4 rounded-lg mb-2">
+<p class="italic text-gray-700">"终于激活了电话卡！不用再借别人热点了。"</p>
+<p class="text-gray-600 text-sm mt-1">——某理工科大三学生</p>
+</div>
+<p class="text-gray-600">这类事件虽小，但代表着"控制感"的回归，是抵抗混乱的重要锚点。</p>
+</div>
+<div class="timeline-item">
+<h4 class="font-bold text-gray-800 mb-2">朋友间的亲密互动</h4>
+<div class="bg-green-50 p-4 rounded-lg mb-2">
+<p class="italic text-gray-700">"悄摸给室友买了生日蛋糕，她回来时眼睛都亮了。"</p>
+<p class="text-gray-600 text-sm mt-1">——微博匿名投稿</p>
+</div>
+<p class="text-gray-600">非正式仪式感带来强烈归属体验，一句"你记得我"胜过千言万语。</p>
+</div>
+<div class="timeline-item">
+<h4 class="font-bold text-gray-800 mb-2">微小成就与自主感</h4>
+<div class="bg-green-50 p-4 rounded-lg mb-2">
+<p class="italic text-gray-700">"我今天第一次独立完成了实验报告，导师还夸我思路清晰！"</p>
+<p class="text-gray-600 text-sm mt-1">——一名曾患轻度抑郁的大二女生</p>
+</div>
+<p class="text-gray-600">成就感不在于大小，而在于"我能行"的信念重建，是自我效能感的体现。</p>
+</div>
+<div class="timeline-item">
+<h4 class="font-bold text-gray-800 mb-2">享受感官愉悦</h4>
+<div class="bg-green-50 p-4 rounded-lg mb-2">
+<p class="italic text-gray-700">"冬天吃上一口滚烫的锅包肉，整个人都被治愈了。"</p>
+<p class="text-gray-600 text-sm mt-1">——豆瓣小组留言</p>
+</div>
+<p class="text-gray-600">美食不仅是味觉享受，更是情绪修复的良药，直接作用于大脑奖赏系统。</p>
+</div>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow-lg p-6">
+<div class="flex items-center mb-6">
+<div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mr-3">
+<i class="fas fa-frown text-red-500"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800">最痛苦的时刻：制度性压迫的缩影</h3>
+</div>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="bg-red-100 text-red-700 font-bold rounded-lg w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                    2.2
+                                </div>
+<div>
+<h4 class="font-bold text-gray-800 mb-1">开班会</h4>
+<p class="text-gray-600">被指"形式主义泛滥"，内容重复且占用私人时间，被视为对学生时间的不尊重。</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-red-100 text-red-700 font-bold rounded-lg w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                    2.2
+                                </div>
+<div>
+<h4 class="font-bold text-gray-800 mb-1">早读</h4>
+<p class="text-gray-600">评论称"一流大学抓科研，三流大学抓考勤"，反映对教育本质的深刻反思与不满。</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-orange-100 text-orange-700 font-bold rounded-lg w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                    2.6
+                                </div>
+<div>
+<h4 class="font-bold text-gray-800 mb-1">早八</h4>
+<p class="text-gray-600">强制早起打乱生物钟，长期睡眠剥夺引发慢性疲劳与情绪低落。</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-yellow-100 text-yellow-700 font-bold rounded-lg w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                                    3.0
+                                </div>
+<div>
+<h4 class="font-bold text-gray-800 mb-1">表格</h4>
+<p class="text-gray-600">行政流程繁琐，作为"收表人"需反复催促，承受来自上下级的双重压力。</p>
+</div>
+</div>
+</div>
+<div class="mt-8 bg-gray-50 p-4 rounded-lg">
+<p class="text-gray-700">这些评分不仅是情绪反馈，更是对高校管理方式的无声抗议。它们共同指向一个核心矛盾：<strong class="text-red-600">组织效率优先 vs 个体尊严保障</strong>。当管理制度忽视学生的主体性感受时，便极易滋生疏离与反抗。</p>
+</div>
+</div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-utensils text-green-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">美食带来的温暖氛围</h3>
+</div>
+<div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="高校食堂内学生集体用餐实景" class="w-full h-full object-cover" src="https://agent.qianwen.com/mos/3343707f21b64f82877bb925d2a0067a/795c8026197712d753187921513bcaa0"/>
+</div>
+<p class="text-gray-600 mt-4 text-sm">高校食堂内学生们围坐在一起享用美食，场面温馨热闹。食物不仅填饱肚子，更承载着分享与陪伴的情感价值。</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-home text-blue-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">私密放松空间</h3>
+</div>
+<div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="大学生宿舍生活画面四位女生围坐聊天背景蓝色床帘" class="w-full h-full object-cover" src="https://agent.qianwen.com/mos/3343707f21b64f82877bb925d2a0067a/0f448ae9396f11bbeecf79cb0922404b"/>
+</div>
+<p class="text-gray-600 mt-4 text-sm">四位女生在宿舍内轻松地围坐聊天，背景是温馨的上下铺和蓝色床帘。这一私密而放松的空间，与前述制度性压抑形成鲜明对比。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 bg-white" id="relationships">
+<div class="container mx-auto px-4">
+<div class="max-w-5xl mx-auto">
+<div class="flex items-center mb-10">
+<div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mr-4">
+<i class="fas fa-handshake text-purple-600 text-xl"></i>
+</div>
+<h2 class="text-3xl font-bold text-gray-800">四、人际关系中的偏好与深层矛盾</h2>
+</div>
+
+<div class="mb-12">
+<div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+<div class="flex items-center mb-6">
+<i class="fas fa-puzzle-piece text-purple-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">"搭子文化"的兴起与演化</h3>
+</div>
+<p class="text-gray-700 mb-6">传统深度关系构建日益困难，"搭子文化"成为Z世代主流的替代性社交模式。"可以没对象，但必须有搭子"已成流行语。这种"拼积木式"社交，按需组合，随时开始随时结束，具有高度的灵活性与边界感。</p>
+<div class="overflow-x-auto">
+<table class="min-w-full bg-gray-50 rounded-lg overflow-hidden">
+<thead class="bg-purple-100">
+<tr>
+<th class="py-3 px-4 text-left font-bold text-gray-700">编号</th>
+<th class="py-3 px-4 text-left font-bold text-gray-700">搭子类型</th>
+<th class="py-3 px-4 text-left font-bold text-gray-700">功能定位</th>
+<th class="py-3 px-4 text-left font-bold text-gray-700">心理需求</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-gray-200 hover:bg-gray-50">
+<td class="py-3 px-4">1</td>
+<td class="py-3 px-4 font-medium">干饭搭子</td>
+<td class="py-3 px-4">聚焦美食分享，避免深入交流</td>
+<td class="py-3 px-4">减少社交能耗</td>
+</tr>
+<tr class="border-b border-gray-200 hover:bg-gray-50">
+<td class="py-3 px-4">2</td>
+<td class="py-3 px-4 font-medium">自习搭子</td>
+<td class="py-3 px-4">强调沉浸式学习，不说废话</td>
+<td class="py-3 px-4">提升专注效率</td>
+</tr>
+<tr class="border-b border-gray-200 hover:bg-gray-50">
+<td class="py-3 px-4">3</td>
+<td class="py-3 px-4 font-medium">运动搭子</td>
+<td class="py-3 px-4">技术探讨为主，专注动作本身</td>
+<td class="py-3 px-4">共同进步激励</td>
+</tr>
+<tr class="border-b border-gray-200 hover:bg-gray-50">
+<td class="py-3 px-4">4</td>
+<td class="py-3 px-4 font-medium">技能交换搭子</td>
+<td class="py-3 px-4">Python教学换健身指导</td>
+<td class="py-3 px-4">双向价值互换</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-3 px-4">5</td>
+<td class="py-3 px-4 font-medium">AI情感搭子</td>
+<td class="py-3 px-4">虚拟陪伴、情绪疏导、话术润色</td>
+<td class="py-3 px-4">即时响应无评判 <sup>[5]</sup></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-6 bg-blue-50 p-4 rounded-lg">
+<p class="text-gray-700">如今，"AI搭子"已成为新趋势。据调查，<strong>62.7%</strong> 的受访者表示会借助AI处理现实社交场景，其中最受欢迎的是"沟通技巧"（<strong>41.9%</strong>）与"礼物挑选"（<strong>39.3%</strong>）<sup>[5]</sup>。AI以其无评判、高响应的特点，填补了部分情感支持的空白。</p>
+</div>
+</div>
+
+<div class="mb-12">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-robot text-blue-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">AI情感陪伴的技术形态</h3>
+</div>
+<div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="AI情感陪伴界面中虚拟人物与用户对话的UI设计" class="w-full h-full object-contain bg-white" src="https://agent.qianwen.com/mos/3343707f21b64f82877bb925d2a0067a/8a7a64de2a5a8f35093aa67c26ec883e"/>
+</div>
+<p class="text-gray-600 mt-4 text-sm">百度输入法AI保保聊天界面，展示虚拟人物与用户进行对话。这直观呈现了人工智能如何作为一种新型"情感搭子"，介入青年的日常生活。</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-8 mb-12">
+<div class="bg-white rounded-xl shadow-lg p-6">
+<div class="flex items-center mb-6">
+<div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+<i class="fas fa-user-alone text-blue-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800">孤独等级评分（5分制）</h3>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-3 border-b">
+<span class="text-gray-700">深夜回忆遗憾往事</span>
+<span class="font-bold text-red-600">4.74</span>
+</div>
+<div class="flex justify-between items-center pb-3 border-b">
+<span class="text-gray-700">遭遇打击时无人陪伴</span>
+<span class="font-bold text-orange-500">4.09</span>
+</div>
+<div class="flex justify-between items-center pb-3 border-b">
+<span class="text-gray-700">在聚会中格格不入</span>
+<span class="font-bold text-yellow-600">3.72</span>
+</div>
+<div class="flex justify-between items-center pb-3 border-b">
+<span class="text-gray-700">回到空荡住所</span>
+<span class="font-bold text-blue-500">3.50</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">其他场景</span>
+<span class="font-bold text-gray-500">2.80</span>
+</div>
+</div>
+<div class="mt-6 bg-gray-50 p-4 rounded-lg">
+<p class="text-gray-700 text-sm">"深夜回忆"之所以评分最高，是因为它触及了存在主义层面的孤独——对过往选择的悔恨、对人生意义的追问。<sup>[4]</sup></p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6">
+<div class="flex items-center mb-6">
+<div class="w-10 h-10 rounded-lg bg-pink-100 flex items-center justify-center mr-3">
+<i class="fas fa-heart text-pink-600"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-800">脱单意愿的性别差异</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="text-center mb-2">
+<span class="text-4xl font-bold text-purple-600">76.8%</span>
+</div>
+<p class="text-gray-700 text-center">总体想恋爱比例</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-blue-50 p-4 rounded-lg text-center">
+<div class="text-3xl font-bold text-blue-700 mb-1">85.9%</div>
+<p class="text-gray-700 text-sm">男性渴望脱单比例（30岁以下）</p>
+</div>
+<div class="bg-pink-50 p-4 rounded-lg text-center">
+<div class="text-3xl font-bold text-pink-700 mb-1">21.9%</div>
+<p class="text-gray-700 text-sm">女性"完全不想脱单"比例</p>
+</div>
+</div>
+<div class="bg-gray-50 p-4 rounded-lg">
+<p class="text-gray-700 text-sm">这种差异背后，是不同的人生规划权重。女性更担忧婚姻对职业发展的冲击，以及育儿责任的不对等分配。<sup>[4]</sup></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mb-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-heart text-red-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">人际关系主题的视觉收束</h3>
+</div>
+<div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="校园恋爱空间窗边情侣依偎的温柔瞬间" class="w-full h-full object-cover" src="https://agent.qianwen.com/mos/3343707f21b64f82877bb925d2a0067a/ed622e6bfe3103ade5a45823a3b4a4c3"/>
+</div>
+<p class="text-gray-600 mt-4 text-sm">一对年轻情侣在教室窗边依偎，女生轻倚男生肩头，笑容温柔。这一充满温情的画面，为"人际关系"主题提供了理想的视觉收束。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 section-alt-3">
+<div class="container mx-auto px-4">
+<div class="max-w-5xl mx-auto">
+<div class="flex items-center mb-10">
+<div class="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center mr-4">
+<i class="fas fa-exclamation-triangle text-red-600 text-xl"></i>
+</div>
+<h2 class="text-3xl font-bold text-gray-800">真实案例集锦：情感困境的个体映照</h2>
+</div>
+<p class="text-gray-700 mb-8">以下是近年来发生的大学生情感真实案例，均源自官方教育平台、新闻媒体或高校工作记录，反映了青年在情感适应中的真实困境与应对。</p>
+<div class="grid md:grid-cols-2 gap-6 mb-8">
+
+<div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-user-times text-red-600"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-800 mb-1">因表白被拒产生轻生念头</h3>
+<p class="text-gray-600 text-sm">某高校学生刘某因唯一信任的同学王某恋爱后拒绝其表白，情绪崩溃并向辅导员发送遗愿短信。</p>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg">
+<p class="text-gray-700 text-sm"><strong>干预措施：</strong>心理疏导、药物治疗与家校合作 <sup>[6]</sup></p>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-heart-broken text-orange-600"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-800 mb-1">失恋导致自残行为</h3>
+<p class="text-gray-600 text-sm">女生小A分手后陷入消极状态，出现自残行为。辅导员及时带其就医，并通过社团活动帮助其重建社交网络。</p>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg">
+<p class="text-gray-700 text-sm"><strong>干预措施：</strong>及时就医、社团活动重建社交 <sup>[7]</sup></p>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-trophy text-yellow-600"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-800 mb-1">竞选失败引发价值感丧失</h3>
+<p class="text-gray-600 text-sm">大一新生小L因屡次竞选失败感到"像大海里的一滴水"。咨询师利用叙事疗法引导其回顾成功经历，重塑自信。</p>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg">
+<p class="text-gray-700 text-sm"><strong>干预措施：</strong>叙事疗法、成功经历回顾 <sup>[8]</sup></p>
+</div>
+</div>
+
+<div class="bg-white rounded-xl shadow-lg p-6 hover-lift">
+<div class="flex items-start mb-4">
+<div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-3 flex-shrink-0">
+<i class="fas fa-first-aid text-green-600"></i>
+</div>
+<div>
+<h3 class="font-bold text-gray-800 mb-1">朋友圈发布轻生视频触发紧急响应</h3>
+<p class="text-gray-600 text-sm">艾琳（化名）在朋友圈发布楼顶视频配文"我不想活了"，学校迅速启动应急机制，安排心理咨询师面对面疏导。</p>
+</div>
+</div>
+<div class="bg-gray-50 p-3 rounded-lg">
+<p class="text-gray-700 text-sm"><strong>干预措施：</strong>应急机制启动、面对面心理疏导 <sup>[9]</sup></p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6">
+<p class="text-gray-700">这些案例揭示了当代大学生在情感、身份、健康等方面面临的多重挑战，也展现了高校心理支持系统的必要性与局限性。从表白被拒到意外怀孕，从竞选失败到艾滋病感染，每一个案例都指向青年在成长过程中需要应对的复杂情感议题。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 section-alt-4" id="conclusion">
+<div class="container mx-auto px-4">
+<div class="max-w-5xl mx-auto">
+<div class="flex items-center mb-10">
+<div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mr-4">
+<i class="fas fa-seedling text-indigo-600 text-xl"></i>
+</div>
+<h2 class="text-3xl font-bold text-gray-800">最终结论：在不确定的时代寻找确定性的生长</h2>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+<p class="text-lg text-gray-700 mb-6">当代大学生的情感生态，是一场在结构性压力与个体韧性之间的持续拉锯战。他们既是压力的承受者，也是意义的主动建构者。</p>
+<div class="grid md:grid-cols-3 gap-6 mb-8">
+<div class="bg-blue-50 p-5 rounded-lg">
+<div class="flex items-center mb-3">
+<div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+<i class="fas fa-bullseye text-blue-600"></i>
+</div>
+<h3 class="font-bold text-gray-800">幸福依赖于"微确定性"</h3>
+</div>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+<span><strong>微观掌控感</strong>：如完成一项拖延已久的任务</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+<span><strong>自主选择权</strong>：如决定何时吃饭、与谁交往</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+<span><strong>真实情感回应</strong>：如朋友一句真诚的鼓励</span>
+</li>
+</ul>
+</div>
+<div class="bg-red-50 p-5 rounded-lg">
+<div class="flex items-center mb-3">
+<div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mr-3">
+<i class="fas fa-exclamation-circle text-red-600"></i>
+</div>
+<h3 class="font-bold text-gray-800">痛苦源于三大矛盾</h3>
+</div>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+<span><strong>未来的不确定性</strong> vs 对稳定人生的渴望</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+<span><strong>深层情感缺失</strong> vs 社交浅层化趋势</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+<span><strong>制度性压迫</strong> vs 个体尊严诉求</span>
+</li>
+</ul>
+</div>
+<div class="bg-green-50 p-5 rounded-lg">
+<div class="flex items-center mb-3">
+<div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-3">
+<i class="fas fa-mountain text-green-600"></i>
+</div>
+<h3 class="font-bold text-gray-800">韧性生长的三大路径</h3>
+</div>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<i class="fas fa-dollar-sign text-green-500 mt-1 mr-2"></i>
+<span><strong>经济路径</strong>：为情绪价值付费，月均支出达 <strong>949元</strong> <sup>[15]</sup></span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-robot text-green-500 mt-1 mr-2"></i>
+<span><strong>技术路径</strong>：借助AI进行沟通训练、情绪疏导</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-book text-green-500 mt-1 mr-2"></i>
+<span><strong>文化路径</strong>：发展"搭子社交"、参与志愿活动</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="quote-card p-6 rounded-xl">
+<p class="text-xl italic text-gray-700">"韧性生长"不是被动承受，而是主动构建属于自己的意义系统。他们不再等待被拯救，而是在裂缝中种花，用自己的方式，在不确定的时代，寻找确定性的生长。</p>
+</div>
+</div>
+
+<div class="mb-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+<div class="p-6">
+<div class="flex items-center mb-4">
+<i class="fas fa-mobile-alt text-purple-500 text-xl mr-3"></i>
+<h3 class="text-xl font-bold text-gray-800">新一代青年的轻量化社交常态</h3>
+</div>
+<div class="aspect-video bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="两名大学生在咖啡馆用手机互动的搭子社交场景" class="w-full h-full object-cover" src="https://agent.qianwen.com/mos/3343707f21b64f82877bb925d2a0067a/c4cff6af7172be9ea88faea2661fb770"/>
+</div>
+<p class="text-gray-600 mt-4 text-sm">两名大学生在咖啡馆内用手机互动，表情专注。这一场景完美诠释了Z世代的轻量化社交常态，是"韧性生长"在日常生活中的具体投射。</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="max-w-5xl mx-auto">
+<div class="grid md:grid-cols-3 gap-8 mb-8">
+<div>
+<h3 class="text-xl font-bold mb-4 flex items-center">
+<i class="fas fa-graduation-cap mr-2"></i> 数据来源
+                        </h3>
+<ul class="space-y-2 text-gray-300">
+<li>浙江中医药大学调研 (2025)</li>
+<li>中科院心理所 &amp; 中青校媒联合调查</li>
+<li>《2024年大学生心理健康状况调查报告》</li>
+<li>《大学生生涯体验探索》框架</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4 flex items-center">
+<i class="fas fa-link mr-2"></i> 参考文献
+                        </h3>
+<ul class="space-y-2 text-sm text-gray-300">
+<li>[1] <a class="hover:text-blue-300 underline" href="https://www.100ec.cn/detail--6659635.html">北师大联合小红书发布网络社会与青年婚恋观调查报告</a></li>
+<li>[2] <a class="hover:text-blue-300 underline" href="http://www.cjsh.org.cn/cn/article/doi/10.16835/j.cnki.1000-9817.2025338">大学生体能指数与抑郁焦虑及压力症状的关联</a></li>
+<li>[3] <a class="hover:text-blue-300 underline" href="https://www.happypsy.com/news/xin-li-jian-kang-lan-pi-shu-2024-nian-da-xue-sheng-xin-li/">心理健康蓝皮书 | 《2024年大学生心理健康状况调查报告》</a></li>
+<li>[4] <a class="hover:text-blue-300 underline" href="http://psy.china.com.cn/2025-06/20/content_43141390.htm">蓝皮书报告 | 2024年大学生心理健康状况调查报告</a></li>
+<li>[5] <a class="hover:text-blue-300 underline" href="https://i.ifeng.com/c/8r3NCDQJpTI">Soul App发布《2026年社交趋势报告》</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4 flex items-center">
+
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+<p>© 2026 当代大学生校园生活情感洞察报告 | 数据新闻深度分析</p>
+<p class="text-sm mt-2">最后更新：2026年5月27日</p>
+</div>
+</div>
+</div>
+</footer>
+
+<button class="fixed bottom-6 right-6 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition-all opacity-0 invisible" id="back-to-top">
+<i class="fas fa-arrow-up"></i>
+</button>
+<script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 如果是移动端菜单，点击后隐藏菜单
+                    if (window.innerWidth < 768) {
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 卡片悬停效果增强
+        document.querySelectorAll('.hover-lift').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+        
+        // 初始化图表
+        function initCharts() {
+            // 心理健康数据图表
+            const mentalHealthChart = echarts.init(document.getElementById('mental-health-chart'));
+            const mentalHealthOption = {
+                title: {
+                    text: '大学生心理健康数据对比',
+                    left: 'center',
+                    textStyle: {
+                        fontSize: 16,
+                        fontWeight: 'bold'
+                    }
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                legend: {
+                    data: ['抑郁症状', '焦虑症状'],
+                    top: 30
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    top: '20%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['全国平均', '女生', '男生', '睡眠质量差者']
+                },
+                yAxis: {
+                    type: 'value',
+                    name: '检出率 (%)',
+                    max: 70
+                },
+                series: [
+                    {
+                        name: '抑郁症状',
+                        type: 'bar',
+                        data: [24.26, 25.33, 22.61, 61.21],
+                        itemStyle: {
+                            color: '#f72585'
+                        },
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{c}%'
+                        }
+                    },
+                    {
+                        name: '焦虑症状',
+                        type: 'bar',
+                        data: [33.22, null, null, null],
+                        itemStyle: {
+                            color: '#4361ee'
+                        },
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: '{c}%'
+                        }
+                    }
+                ]
+            };
+            
+            // 如果有图表容器则渲染
+            if (document.getElementById('mental-health-chart')) {
+                mentalHealthChart.setOption(mentalHealthOption);
+                
+                // 响应式调整
+                window.addEventListener('resize', function() {
+                    mentalHealthChart.resize();
+                });
+            }
+        }
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            initCharts();
+        });
+    </script>
+</body>
+</html>
